@@ -2,18 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
     tools:context="com.example.theseus.qrcode.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
-    <!--<me.dm7.barcodescanner.zxing.ZXingScannerView-->
-        <!--android:id="@+id/qrCodeScanner"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="180dp">-->
-    <!--</me.dm7.barcodescanner.zxing.ZXingScannerView>-->
+
+    <fragment
+        android:id="@+id/scanner_fragment"
+        android:name="com.example.theseus.qrcode.SimpleScannerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <EditText
+        android:id="@+id/editTextLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Lettre"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editTextBac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="N° bac"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,16 +44,6 @@
         app:srcCompat="@mipmap/ic_launcher"
         tools:layout_editor_absoluteX="700dp"
         tools:layout_editor_absoluteY="218dp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Type text"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="16dp" />
 
     <Button
         android:id="@+id/generate_qr"

@@ -28,6 +28,8 @@ public class MainActivityFragment extends Fragment {
     }
     Button generate_QRCode;
     ImageView qrCode;
+    EditText mEditTextLetter;
+    EditText mEditTextBac;
     EditText mEditText;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,7 +38,8 @@ public class MainActivityFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_main, container, false);
         generate_QRCode=(Button)view.findViewById(R.id.generate_qr);
         qrCode=(ImageView)view.findViewById(R.id.imageView);
-        mEditText=(EditText)view.findViewById(R.id.editText);
+        mEditTextLetter=(EditText)view.findViewById(R.id.editTextLetter);
+        mEditTextBac=(EditText)view.findViewById(R.id.editTextBac);
         generate_QRCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +48,7 @@ public class MainActivityFragment extends Fragment {
                 // If you're using the support library, use IntentIntegrator.forSupportFragment(this) instead.
 
 
-                String text=mEditText.getText().toString();
+                String text= mEditTextLetter.getText().toString() + "/" + mEditTextBac.getText().toString();
                 MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
                 try {
                     BitMatrix bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.CODE_128,400,100);

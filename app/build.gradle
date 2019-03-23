@@ -40,5 +40,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
 //    Add Zxing library to generate barcode
     implementation 'com.google.zxing:core:3.2.1'
+    implementation 'me.dm7.barcodescanner:zbar:1.9.8'
     implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
 }
