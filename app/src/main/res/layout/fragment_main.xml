@@ -16,6 +16,12 @@
         android:layout_width="match_parent"
         android:layout_height="300dp" />
 
+    <TextView
+        android:id="@+id/textViewOf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OF :" />
+
     <EditText
         android:id="@+id/editTextLetter"
         android:layout_width="wrap_content"
@@ -32,7 +38,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="N° bac"
+        android:text="Bac"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="16dp" />
 
